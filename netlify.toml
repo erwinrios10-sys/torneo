@@ -1,0 +1,31 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+  command = "npm test"
+
+[functions]
+  node_bundler = "esbuild"
+
+# /admin sin ".html"
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/admin*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

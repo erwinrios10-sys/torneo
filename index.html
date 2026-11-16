@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1F3D33" />
+  <meta name="description" content="Torneo de pádel: inscripciones, grupos, eliminatorias, horarios y resultados en vivo." />
+  <title>Torneo de Pádel · Partidos y resultados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%23C8F031'/><path d='M14 40c22 6 50 6 72 0M14 60c22-6 50-6 72 0' stroke='%231F3D33' stroke-width='5' fill='none'/></svg>" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#/" id="brand"><span class="dot"></span><span class="t">Torneo</span></a>
+      <nav class="nav" id="nav">
+        <a href="#/" data-r="home">Inicio</a>
+        <a href="#/partidos" data-r="partidos">Partidos</a>
+        <a href="#/categorias" data-r="categorias">Categorías</a>
+        <a href="#/inscripciones" data-r="inscripciones">Inscripciones</a>
+        <a href="#/vivo" data-r="vivo">En vivo</a>
+      </nav>
+    </div>
+  </header>
+  <div class="banner hidden" id="banner"><div class="wrap"><span>📣</span><span id="bannerText"></span></div></div>
+  <div id="hero"></div>
+  <main><div class="wrap" id="app"><div class="empty"><b>Cargando…</b></div></div></main>
+  <footer>
+    <div class="wrap row">
+      <div class="updater"><span id="upd">Conectando…</span> <button class="btn ghost sm" id="refresh">Actualizar</button></div>
+      <div class="spacer"></div>
+      <span id="foot"></span>
+    </div>
+  </footer>
+  <script type="module" src="/js/public.js"></script>
+</body>
+</html>
